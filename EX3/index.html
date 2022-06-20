@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MindX</title>
+    <style>
+      /* font-family: 'Montserrat',
+sans-serif; */
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200&display=swap");
+      /* font-family: 'Commissioner',
+sans-serif; */
+      @import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@100&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+      }
+      .max-width {
+        max-width: 1300px;
+        padding: 50px;
+      }
+      /* <----- Home menu -----> */
+      .home-menu {
+        background-image: url("./image/bcg.png");
+        height: 700px;
+        background-size: cover; /*Thay đổi kích thước hình nền để bao phủ toàn bộ vùng chứa,
+  ngay cả khi nó phải kéo dài hình ảnh hoặc cắt bớt một chút ở một trong các cạnh*/
+        position: relative; /*Hiện các nội dung bị dè ở dưới lên trên.*/
+        z-index: 1; /*Độ Z của hình*/
+      }
+      .opacity-menu {
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: 0.6; /*Độ mờ của hình ảnh*/
+        position: absolute; /*Đưa các nội dung bị dè ở trên xuống dưới.*/
+        z-index: 2;
+      }
+
+      /*home-menu sẽ nằm theo chiều Z số 1 là nằm dưới cùng
+sau đó
+  opcity-menu sẽ nằm trên là 2*/
+
+      nav {
+        margin-left: 10%;
+      }
+
+      nav .max-width {
+        display: flex; /*Cho các phần tử sang chiều ngang */
+        justify-content: space-around;
+      }
+      .max-width .logo img {
+        height: 7rem;
+        /* width: 7rem; */
+      }
+
+      .max-width .menu {
+        width: 800px;
+        list-style: none; /*Xóa dấu chấm hoặc số của list*/
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .max-width .logo {
+        z-index: 3;
+      }
+      .max-width .menu a {
+        color: white;
+        font-family: "Commissioner", sans-serif;
+        font-size: 25px;
+        z-index: 3;
+        /* font-weight: 500; */
+      }
+      /* <----- Content-menu -----> */
+      .content-menu {
+        width: 1000px;
+        height: 200px;
+        margin-left: 10%;
+        margin-top: 5%;
+        color: white;
+        position: relative; /*Đưa nội dung lên trên*/
+        z-index: 6; /*Cho chữ hiện lên*/
+      }
+
+      .content-menu .text p {
+        font-family: "Montserrat", sans-serif;
+        font-size: 45px;
+        line-height: 60px; /*Set chiều cao*/
+      }
+      .content-menu .multi-button {
+        width: 450px;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+      .content-menu .multi-button input{
+        width: 300px;
+        height: 40px;
+        border-radius: 30px;
+        outline: none;
+        border: solid 2px orange;
+        background: none;
+        font-size: 20px;
+      }
+      .content-menu .multi-button #input{
+        color: white;
+        padding-left: 1rem;
+      }
+      .content-menu .multi-button button {
+        width: 100px;
+        height: 40px;
+        border-radius: 30px;
+        outline: none;
+        border: solid 2px orange;
+        background: none;
+        font-size: 17px;
+      }
+      #btn1 {
+        background-color: orange;
+        color: white;
+      }
+      #btn1:hover {
+        background: none;
+        color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Home menu -->
+    <div class="home-menu">
+      <div class="opacity-menu"></div>
+      <nav>
+        <div class="max-width">
+          <div class="logo">
+            <img src="./image/logo.png" alt="" />
+          </div>
+          <ul class="menu">
+            <a href="#">
+              <li>Sign Up</li>
+            </a>
+            <a href="#">
+              <li>Our cities</li>
+            </a>
+            <a href="https://mindx.vn/">
+              <li>About Us</li>
+            </a>
+            <a href="/EX2/index.html">
+              <li>Sign In</li>
+            </a>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Content menu -->
+      <div class="content-menu">
+        <div class="text">
+          <p>Born Ordinary</p>
+          <p>Grow EXTRAORDINARY</p>
+          <p>Let's change the world with technology</p>
+        </div>
+
+        <div class="multi-button">
+          <input id="input" type="text" placeholder="Search our facilities">
+          <button id="btn1">Search</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
